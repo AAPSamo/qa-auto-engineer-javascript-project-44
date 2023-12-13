@@ -1,0 +1,17 @@
+Работа №1 запуск "node bin/brain-even.js"
+
+Welcome to the Brain Games!
+May I have your name? bob
+Hello, bob!
+Answer "yes" if the number is even, otherwise answer "no".
+Question: 4
+Your answer: yes
+Correct!
+Question: 15
+Your answer: no
+Correct!
+Question: 20
+Your answer: yes
+Correct!
+Congratulations, bob!
+PS C:\JSTasks\qa-auto-engineer-javascript-project-44>
