@@ -15,7 +15,7 @@ export const name = () => {
 
 export const randomArithmetecOperations = () => {
   let numbers = ['+', '-', '*'];
-  let randomIndex = Math.floor(Math.random() * (numbers.length - 1)); // генерируем случайный индекс в допустимом диапазоне
+  let randomIndex = Math.floor(Math.random() * (numbers.length)); // генерируем случайный индекс в допустимом диапазоне
   return numbers[randomIndex]
 }
 

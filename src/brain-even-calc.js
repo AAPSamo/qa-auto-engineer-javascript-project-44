@@ -39,6 +39,7 @@ export const answer = () => {
         } else if (answerUser != summRandomOnePlusTwo) {
           console.log('\'' +answerUser +'\''+' is wrong answer ;(. Correct answer was '+'\''+ summRandomOnePlusTwo+'\''+'.')
           console.log(`Let\'s try again, ${nameUser}!`);
+          i = 2;
           break;
         } else { console.log('Error'); }
        
@@ -55,7 +56,10 @@ export const answer = () => {
           countTrueAnswers += 1;
 
         } else if (answerUser != summRandomOnePlusTwo) {
-          console.log('Error');
+          console.log('\'' +answerUser +'\''+' is wrong answer ;(. Correct answer was '+'\''+ summRandomOnePlusTwo+'\''+'.')
+          console.log(`Let\'s try again, ${nameUser}!`);
+          i = 2;
+          break;
 
         } else { console.log('Error'); }
        
@@ -72,7 +76,10 @@ export const answer = () => {
           countTrueAnswers += 1;
 
         } else if (answerUser != summRandomOnePlusTwo) {
-          console.log('Error');
+          console.log('\'' +answerUser +'\''+' is wrong answer ;(. Correct answer was '+'\''+ summRandomOnePlusTwo+'\''+'.')
+          console.log(`Let\'s try again, ${nameUser}!`);
+          i = 2;
+          break;
 
         } else { console.log('Error'); }
        
@@ -86,7 +93,9 @@ export const answer = () => {
   if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`)
   }
+  /*
   else {
     console.log(`You have errors, ${nameUser}!`)
   }
+  */
 }
