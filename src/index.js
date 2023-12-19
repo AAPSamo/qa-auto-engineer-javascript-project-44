@@ -93,8 +93,9 @@ export function isPrime(num) {
 }
 
 /// Проверка чисел от 0 до МАКС не Простое оно или нет.
-function printPrimes(max) {
+/*function printPrimes(max) {
   for (let i = 2; i <= max; i++) {
     if (isPrime(i)) console.log(i);
   }
 }
+*/
