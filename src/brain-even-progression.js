@@ -4,8 +4,9 @@
 */
 
 import readlineSync from 'readline-sync';
-import { getRandomInt, nod, progressionGenerator, getRandomIntMinMax } from './index.js';
-
+import {
+  getRandomInt, nod, progressionGenerator, getRandomIntMinMax,
+} from './index.js';
 
 let nameUser;
 export const name = () => {
@@ -19,13 +20,11 @@ export const answer = () => {
   let i = 0;
   let countTrueAnswers = 0;
 
-
   for (i; i <= 2; i += 1) {
-
     const nodItog = progressionGenerator();
-    var removed = nodItog.splice(getRandomIntMinMax(1,5), 1, '..'); // в указанном индексе массива, 1 элемент заменяется на ..
+    const removed = nodItog.splice(getRandomIntMinMax(1, 5), 1, '..'); // в указанном индексе массива, 1 элемент заменяется на ..
 
-    console.log(`Question: ${nodItog.join(' ')}`);  //.join(' ') убирает ,  в выводе массива
+    console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
     const answerUser = readlineSync.question('Your answer: ');
 
     if (answerUser == removed) {
@@ -39,7 +38,6 @@ export const answer = () => {
     } else { console.log('Error'); }
   }
 
-  
   if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }

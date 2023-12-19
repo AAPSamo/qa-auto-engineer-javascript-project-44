@@ -74,16 +74,15 @@ export const progressionGenerator = () => {
   let startFrom = getRandomIntMinMax(1, 50);
   const step = getRandomIntMinMax(1, 6);
   const progressionLength = getRandomIntMinMax(5, 10);
-  let makeArray = [];
+  const makeArray = [];
 
   for (i = 1; i <= progressionLength; i++) {
     startFrom += step;
-    makeArray.push(startFrom)
-    //console.log(startFrom);
+    makeArray.push(startFrom);
+    // console.log(startFrom);
   }
-  return makeArray
+  return makeArray;
 };
-
 
 /// Проверка числа не Простое оно или нет.
 export function isPrime(num) {
@@ -99,5 +98,3 @@ function printPrimes(max) {
     if (isPrime(i)) console.log(i);
   }
 }
-
-

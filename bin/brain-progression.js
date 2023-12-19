@@ -7,9 +7,6 @@
 
 import { name, answer } from '../src/brain-even-progression.js';
 
-
 console.log('Welcome to the Brain Games!');
 name();
 answer();
-
-

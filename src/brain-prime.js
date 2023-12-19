@@ -2,8 +2,9 @@
 */
 
 import readlineSync from 'readline-sync';
-import { isPrime, nod, progressionGenerator, getRandomIntMinMax } from './index.js';
-
+import {
+  isPrime, nod, progressionGenerator, getRandomIntMinMax,
+} from './index.js';
 
 let nameUser;
 export const name = () => {
@@ -17,21 +18,19 @@ export const answer = () => {
   let i = 0;
   let countTrueAnswers = 0;
 
-
   for (i; i <= 2; i += 1) {
-
-    let checkNumber = getRandomIntMinMax(1, 100)
+    const checkNumber = getRandomIntMinMax(1, 100);
     const primeOrNot = isPrime(checkNumber);
-    //console.log(primeOrNot);
+    // console.log(primeOrNot);
 
-    console.log(`Question: ${checkNumber}`);   
+    console.log(`Question: ${checkNumber}`);
     const answerUser = readlineSync.question('Your answer: ');
 
     if (answerUser == 'yes' && primeOrNot == true) {
       console.log('Correct!');
       countTrueAnswers += 1;
     } else if (answerUser == 'yes' && primeOrNot == false) {
-      console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'no'` + '.');
+      console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '\'no\'' + '.');
       console.log(`Let\'s try again, ${nameUser}!`);
       i = 2;
       break;
@@ -39,15 +38,13 @@ export const answer = () => {
       console.log('Correct!');
       countTrueAnswers += 1;
     } else if (answerUser == 'no' && primeOrNot == true) {
-      console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'yes'` + '.');
+      console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '\'yes\'' + '.');
       console.log(`Let\'s try again, ${nameUser}!`);
       i = 2;
       break;
-    }
-    else { console.log('Error'); }
+    } else { console.log('Error'); }
   }
 
-  
   if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }
