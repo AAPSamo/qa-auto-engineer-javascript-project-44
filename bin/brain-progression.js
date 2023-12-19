@@ -5,7 +5,7 @@
 Игрок должен определить это число.
 */
 
-import { name, answer } from '../src/brain-even-brain-progression.js';
+import { name, answer } from '../src/brain-even-progression.js';
 
 
 console.log('Welcome to the Brain Games!');

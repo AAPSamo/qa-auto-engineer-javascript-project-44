@@ -39,6 +39,7 @@ export const answer = () => {
     } else { console.log('Error'); }
   }
 
+  
   if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }

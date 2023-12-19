@@ -84,3 +84,20 @@ export const progressionGenerator = () => {
   return makeArray
 };
 
+
+/// Проверка числа не Простое оно или нет.
+export function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+}
+
+/// Проверка чисел от 0 до МАКС не Простое оно или нет.
+function printPrimes(max) {
+  for (let i = 2; i <= max; i++) {
+    if (isPrime(i)) console.log(i);
+  }
+}
+
+
