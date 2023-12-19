@@ -1,14 +1,11 @@
 import readlineSync from 'readline-sync';
 
-var nameUser; 
+let nameUser;
 
 export const name = () => {
   nameUser = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameUser}!`);
 };
-
-
-
 
 export const answer = (questionDigit) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -40,9 +37,8 @@ export const answer = (questionDigit) => {
   }
 
   if (countTrueAnswers == 3) {
-    console.log(`Congratulations, ${nameUser}!`)
-  }
-  else {
-    console.log(`You have errors, ${nameUser}!`)
+    console.log(`Congratulations, ${nameUser}!`);
+  } else {
+    console.log(`You have errors, ${nameUser}!`);
   }
 };
