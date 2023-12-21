@@ -22,8 +22,10 @@ export const answer = () => {
   let countTrueAnswers = 0;
 
   for (i; i <= 2; i += 1) {
-    const nodItog = progressionGenerator();
-    const removed = nodItog.splice(getRandomIntMinMax(1, 6), 1, '..');
+    var MaxLenght = getRandomIntMinMax(5, 10)
+    const nodItog = progressionGenerator(MaxLenght);
+    const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght), 1, '..');
+
     // в указанном индексе массива, 1 элемент заменяется на ..
 
     console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива

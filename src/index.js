@@ -69,11 +69,11 @@ export const nod = (intA, intB) => {
   }
 };
 
-export const progressionGenerator = () => {
+export const progressionGenerator = (progressionLength) => {
   let i;
   let startFrom = getRandomIntMinMax(1, 50);
   const step = getRandomIntMinMax(1, 6);
-  const progressionLength = getRandomIntMinMax(5, 10);
+  //const progressionLength;
   const makeArray = [];
 
   for (i = 1; i <= progressionLength; i++) {
