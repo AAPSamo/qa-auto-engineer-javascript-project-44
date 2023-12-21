@@ -22,23 +22,23 @@ export const answer = () => {
   for (i; i <= 2; i += 1) {
     const randomOne = getRandomInt() + 1;
     const randomTwo = getRandomInt() + 1;
-    const nodItog = nod(randomOne, randomTwo);
+    const nodItog = Number(nod(randomOne, randomTwo));
 
     console.log(`Question: ${randomOne} ${randomTwo}`);
-    const answerUser = readlineSync.question('Your answer: ');
+    const answerUser = Number(readlineSync.question('Your answer: '));
 
-    if (answerUser == nodItog) {
+    if (answerUser === nodItog) {
       console.log('Correct!');
       countTrueAnswers += 1;
     } else if (answerUser !== nodItog) {
-      console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'${nodItog}'` + '.');
-      console.log(`Let\'s try again, ${nameUser}!`);
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${nodItog}'.`);
+      console.log(`Let's try again, ${nameUser}!`);
       i = 2;
       break;
     } else { console.log('Error'); }
   }
 
-  if (countTrueAnswers == 3) {
+  if (countTrueAnswers === 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }
 };
