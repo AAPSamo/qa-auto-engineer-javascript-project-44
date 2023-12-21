@@ -79,7 +79,6 @@ export const progressionGenerator = () => {
   for (i = 1; i <= progressionLength; i++) {
     startFrom += step;
     makeArray.push(startFrom);
-    // console.log(startFrom);
   }
   return makeArray;
 };

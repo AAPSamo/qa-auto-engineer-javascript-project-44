@@ -23,7 +23,7 @@ export const answer = () => {
 
   for (i; i <= 2; i += 1) {
     const nodItog = progressionGenerator();
-    const removed = nodItog.splice(getRandomIntMinMax(1, 5), 1, '..');
+    const removed = nodItog.splice(getRandomIntMinMax(1, 6), 1, '..');
     // в указанном индексе массива, 1 элемент заменяется на ..
 
     console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
