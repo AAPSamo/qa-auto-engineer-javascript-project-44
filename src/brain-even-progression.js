@@ -23,7 +23,8 @@ export const answer = () => {
 
   for (i; i <= 2; i += 1) {
     const nodItog = progressionGenerator();
-    const removed = nodItog.splice(getRandomIntMinMax(1, 5), 1, '..'); // в указанном индексе массива, 1 элемент заменяется на ..
+    const removed = nodItog.splice(getRandomIntMinMax(1, 5), 1, '..');
+    // в указанном индексе массива, 1 элемент заменяется на ..
 
     console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
     const answerUser = readlineSync.question('Your answer: ');
@@ -31,7 +32,7 @@ export const answer = () => {
     if (answerUser == removed) {
       console.log('Correct!');
       countTrueAnswers += 1;
-    } else if (answerUser !== removed) {
+    } else if (answerUser != removed) {
       console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'${removed}'` + '.');
       console.log(`Let\'s try again, ${nameUser}!`);
       i = 2;
