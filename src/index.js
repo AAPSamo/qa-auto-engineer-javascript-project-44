@@ -9,7 +9,7 @@ export const name = () => {
 
 export const randomArithmetecOperations = () => {
   const numbers = ['+', '-', '*'];
-  const randomIndex = Math.floor(Math.random() * (numbers.length)); // генерируем случайный индекс в допустимом диапазоне
+  const randomIndex = Math.floor(Math.random() * (numbers.length));// генер.случ. индекс в диапазоне
   return numbers[randomIndex];
 };
 
@@ -93,7 +93,7 @@ export function isPrime(num) {
 }
 
 /// Проверка чисел от 0 до МАКС не Простое оно или нет.
-/*function printPrimes(max) {
+/* function printPrimes(max) {
   for (let i = 2; i <= max; i++) {
     if (isPrime(i)) console.log(i);
   }

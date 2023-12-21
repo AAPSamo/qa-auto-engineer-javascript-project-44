@@ -22,28 +22,31 @@ export const answer = (questionDigit) => {
         countTrueAnswers += 1;
       } else if (answerUser === 'no') {
         console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '"yes"' + '.');
-      console.log(`Let\'s try again, ${nameUser}!`);
-      i = 2;
-      } else { console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '"yes"' + '.');
-      console.log(`Let\'s try again, ${nameUser}!`);
-      i = 2; }
+        console.log(`Let\'s try again, ${nameUser}!`);
+        i = 2;
+      } else {
+        console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '"yes"' + '.');
+        console.log(`Let\'s try again, ${nameUser}!`);
+        i = 2;
+      }
     } else {
       console.log(`Question: ${questionDigit[i]}`);
       var answerUser = readlineSync.question('Your answer: ');
       if (answerUser === 'yes') {
         console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '"no"' + '.');
-      console.log(`Let\'s try again, ${nameUser}!`);
-      i = 2;
+        console.log(`Let\'s try again, ${nameUser}!`);
+        i = 2;
       } else if (answerUser === 'no') {
         console.log('Correct!');
         countTrueAnswers += 1;
-      } else { console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '"no"' + '.');
-      console.log(`Let\'s try again, ${nameUser}!`);
-      i = 2; }
+      } else {
+        console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + '"no"' + '.');
+        console.log(`Let\'s try again, ${nameUser}!`);
+        i = 2;
+      }
     }
   }
   if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`);
-  } 
-  
+  }
 };

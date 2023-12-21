@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { randomArithmetecOperations } from './index.js';
 
-function getRandomInt() { // Получение рандомных целых чисел от 0 до 100 console.log(getRandomInt());
+function getRandomInt() { // Получение рандомных целых чисел от 0 до 100
   return Math.floor(Math.random() * 50);
 }
 
@@ -22,6 +22,7 @@ export const answer = () => {
   // var questionDigit;
 
   for (i; i <= 2; i += 1) {
+    let answerUser;
     const randomOne = getRandomInt();
     const randomTwo = getRandomInt();
 
@@ -29,14 +30,14 @@ export const answer = () => {
       case '+': {
         const summRandomOnePlusTwo = randomOne + randomTwo;
         console.log(`Question: ${randomOne} + ${randomTwo}`);
-        var answerUser = readlineSync.question('Your answer: ');
+        answerUser = readlineSync.question('Your answer: ');
 
-        if (answerUser == summRandomOnePlusTwo) {
+        if (answerUser === summRandomOnePlusTwo) {
           console.log('Correct!');
           countTrueAnswers += 1;
-        } else if (answerUser != summRandomOnePlusTwo) {
-          console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'${summRandomOnePlusTwo}'` + '.');
-          console.log(`Let\'s try again, ${nameUser}!`);
+        } else if (answerUser !== summRandomOnePlusTwo) {
+          console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${summRandomOnePlusTwo}'.`);
+          console.log(`Let's try again, ${nameUser}!`);
           i = 2;
           break;
         } else { console.log('Error'); }
@@ -46,14 +47,14 @@ export const answer = () => {
       case '-': {
         const summRandomOnePlusTwo = randomOne - randomTwo;
         console.log(`Question: ${randomOne} - ${randomTwo}`);
-        var answerUser = readlineSync.question('Your answer: ');
+        answerUser = readlineSync.question('Your answer: ');
 
-        if (answerUser == summRandomOnePlusTwo) {
+        if (answerUser === summRandomOnePlusTwo) {
           console.log('Correct!');
           countTrueAnswers += 1;
-        } else if (answerUser != summRandomOnePlusTwo) {
-          console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'${summRandomOnePlusTwo}'` + '.');
-          console.log(`Let\'s try again, ${nameUser}!`);
+        } else if (answerUser !== summRandomOnePlusTwo) {
+          console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${summRandomOnePlusTwo}'.`);
+          console.log(`Let's try again, ${nameUser}!`);
           i = 2;
           break;
         } else { console.log('Error'); }
@@ -63,23 +64,26 @@ export const answer = () => {
       case '*': {
         const summRandomOnePlusTwo = randomOne * randomTwo;
         console.log(`Question: ${randomOne} * ${randomTwo}`);
-        var answerUser = readlineSync.question('Your answer: ');
+        answerUser = readlineSync.question('Your answer: ');
 
-        if (answerUser == summRandomOnePlusTwo) {
+        if (answerUser === summRandomOnePlusTwo) {
           console.log('Correct!');
           countTrueAnswers += 1;
-        } else if (answerUser != summRandomOnePlusTwo) {
-          console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'${summRandomOnePlusTwo}'` + '.');
-          console.log(`Let\'s try again, ${nameUser}!`);
+        } else if (answerUser !== summRandomOnePlusTwo) {
+          console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${summRandomOnePlusTwo}'.`);
+          console.log(`Let's try again, ${nameUser}!`);
           i = 2;
           break;
         } else { console.log('Error'); }
       }
         break;
+      default:
+        console.log('Error');
+        break;
     }
   }
 
-  if (countTrueAnswers == 3) {
+  if (countTrueAnswers === 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }
   /*

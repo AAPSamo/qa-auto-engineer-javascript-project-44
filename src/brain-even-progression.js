@@ -1,11 +1,12 @@
 /* Игра "Арифметическая прогрессия"
-Показываем игроку ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками.
+Показываем игроку ряд чисел, образующий арифметическую прогрессию,
+заменив любое из чисел двумя точками.
 Игрок должен определить это число.
 */
 
 import readlineSync from 'readline-sync';
 import {
-  getRandomInt, nod, progressionGenerator, getRandomIntMinMax,
+  progressionGenerator, getRandomIntMinMax,
 } from './index.js';
 
 let nameUser;
