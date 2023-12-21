@@ -75,6 +75,8 @@ export const answer = () => {
         } else { console.log('Error'); }
       }
         break;
+      default: { console.log('Error'); }
+        break;
     }
   }
 
