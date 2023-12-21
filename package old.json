@@ -20,19 +20,11 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.0",
     "make": "^0.8.1",
-    "readline-sync": "^1.4.10",
-    "debug": "^4.3.4",
-    "lodash": "^4.17.21"
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@jest/globals": "^29.6.0",
     "eslint": "^8.55.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "^27.6.0",
-    "jest": "^29.7.0",
-    "jest-cli": "^29.6.0",
-    "npm-check-updates": "^16.10.11",
-    "simple-git-hooks": "^2.8.1"
+    "jest": "^29.7.0"
   }
 }

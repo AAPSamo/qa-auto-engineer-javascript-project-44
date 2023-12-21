@@ -1,4 +1,4 @@
-#!/usr/bin / env node
+#!/usr/bin/env node
 
 import { name, answer } from '../src/brain-even-calc.js';
 // console.log('node bin/brain-games.js')
