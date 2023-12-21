@@ -19,8 +19,6 @@ export const answer = () => {
   let i = 0;
   let countTrueAnswers = 0;
 
-  // var questionDigit;
-
   for (i; i <= 2; i += 1) {
     let answerUser;
     const randomOne = getRandomInt();
@@ -77,17 +75,10 @@ export const answer = () => {
         } else { console.log('Error'); }
       }
         break;
-      default:
-        console.log('Error');
     }
   }
 
   if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }
-  /*
-  else {
-    console.log(`You have errors, ${nameUser}!`)
-  }
-  */
 };
