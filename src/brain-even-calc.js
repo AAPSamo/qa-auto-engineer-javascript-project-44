@@ -32,10 +32,10 @@ export const answer = () => {
         console.log(`Question: ${randomOne} + ${randomTwo}`);
         answerUser = readlineSync.question('Your answer: ');
 
-        if (answerUser === summRandomOnePlusTwo) {
+        if (answerUser == summRandomOnePlusTwo) {
           console.log('Correct!');
           countTrueAnswers += 1;
-        } else if (answerUser !== summRandomOnePlusTwo) {
+        } else if (answerUser != summRandomOnePlusTwo) {
           console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${summRandomOnePlusTwo}'.`);
           console.log(`Let's try again, ${nameUser}!`);
           i = 2;
@@ -49,10 +49,10 @@ export const answer = () => {
         console.log(`Question: ${randomOne} - ${randomTwo}`);
         answerUser = readlineSync.question('Your answer: ');
 
-        if (answerUser === summRandomOnePlusTwo) {
+        if (answerUser == summRandomOnePlusTwo) {
           console.log('Correct!');
           countTrueAnswers += 1;
-        } else if (answerUser !== summRandomOnePlusTwo) {
+        } else if (answerUser != summRandomOnePlusTwo) {
           console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${summRandomOnePlusTwo}'.`);
           console.log(`Let's try again, ${nameUser}!`);
           i = 2;
@@ -66,10 +66,10 @@ export const answer = () => {
         console.log(`Question: ${randomOne} * ${randomTwo}`);
         answerUser = readlineSync.question('Your answer: ');
 
-        if (answerUser === summRandomOnePlusTwo) {
+        if (answerUser == summRandomOnePlusTwo) {
           console.log('Correct!');
           countTrueAnswers += 1;
-        } else if (answerUser !== summRandomOnePlusTwo) {
+        } else if (answerUser != summRandomOnePlusTwo) {
           console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${summRandomOnePlusTwo}'.`);
           console.log(`Let's try again, ${nameUser}!`);
           i = 2;
@@ -79,11 +79,10 @@ export const answer = () => {
         break;
       default:
         console.log('Error');
-        break;
     }
   }
 
-  if (countTrueAnswers === 3) {
+  if (countTrueAnswers == 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }
   /*
