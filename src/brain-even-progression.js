@@ -22,7 +22,7 @@ export const answer = () => {
   let countTrueAnswers = 0;
 
   for (i; i <= 2; i += 1) {
-    const MaxLenght = Number(getRandomIntMinMax(5, 10)); // Длина будет от 5 до 10
+    const MaxLenght = Number(getRandomIntMinMax(4, 10)); // Длина будет от 5 до 10
     // console.log("MaxLenght " + MaxLenght)
     const nodItog = progressionGenerator(MaxLenght);
     // console.log("nodItog " + nodItog)
