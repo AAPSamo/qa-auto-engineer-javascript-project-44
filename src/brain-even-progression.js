@@ -23,14 +23,17 @@ export const answer = () => {
 
   for (i; i <= 2; i += 1) {
     const MaxLenght = Number(getRandomIntMinMax(5, 10)); // Длина будет от 5 до 10
+    // console.log("MaxLenght " + MaxLenght)
     const nodItog = progressionGenerator(MaxLenght);
-    const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght), 1, '..');
+    // console.log("nodItog " + nodItog)
+    const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght - 1), 1, '..');
+    // console.log("removed " + removed);
     // в индексе,элемент заменяется на .. и то что заменилось передается в removed
 
-    console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
+    console.log(`Question:${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
     const answerUser = Number(readlineSync.question('Your answer: '));
 
-    if (answerUser == removed) {
+    if (answerUser === Number(removed)) {
       console.log('Correct!');
       countTrueAnswers += 1;
     } else if (answerUser !== removed) {

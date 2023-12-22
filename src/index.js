@@ -53,21 +53,19 @@ export const answer = () => {
 
 export const nod = (intA, intB) => {
   let i = 0;
+  let randomOne = Number(intA);
+  let randomTwo = Number(intB);
 
   for (i; i <= 2; i += 1) {
-    let randomOne = Number(intA);
-    let randomTwo = Number(intB);
-
-    while (randomOne !== 0 & randomTwo !== 0) {
+    while (randomOne !== 0 && randomTwo !== 0) {
       if (randomOne > randomTwo) { // если а больше б, то а присваиваем а/б
         randomOne %= randomTwo;
       } else {
         randomTwo %= randomOne;// наоборот
       }
     }
-
-    return randomOne + randomTwo;
   }
+  return randomOne + randomTwo;
 };
 
 export const progressionGenerator = (progressionLength) => {
