@@ -33,10 +33,10 @@ export const answer = () => {
     console.log(`Question:${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
     const answerUser = Number(readlineSync.question('Your answer: '));
 
-    if (answerUser === Number(removed)) {
+    if (answerUser == Number(removed)) {
       console.log('Correct!');
       countTrueAnswers += 1;
-    } else if (answerUser !== removed) {
+    } else if (answerUser != removed) {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${removed}'.`);
       console.log(`Let's try again, ${nameUser}!`);
       i = 2;
