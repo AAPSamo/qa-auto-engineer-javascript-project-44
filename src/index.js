@@ -13,12 +13,21 @@ export const randomArithmetecOperations = () => {
   return numbers[randomIndex];
 };
 
-export const answer = (questionDigit) => {
+export function getRandomInt() {
+  // Получение рандомных целых чисел от 0 до 100 console.log(getRandomInt());
+  return Math.floor(Math.random() * 100);
+}
+
+export function getRandomIntMinMax(min, max) {
+  // Получение рандомных целых чисел от 0 до Step console.log(getRandomInt());
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export const answer = () => {
   console.log('What is the result of the expression?');
 
   let i = 0;
   let countTrueAnswers = 0;
-  // var questionDigit;
 
   for (i; i <= 2; i += 1) {
     const randomOne = getRandomInt();
@@ -35,29 +44,21 @@ export const answer = (questionDigit) => {
     } else { console.log('Error'); }
   }
 
-  if (countTrueAnswers == 3) {
+  if (countTrueAnswers === 3) {
     console.log(`Congratulations, ${nameUser}!`);
   } else {
     console.log(`You have errors, ${nameUser}!`);
   }
 };
 
-export function getRandomInt() { // Получение рандомных целых чисел от 0 до 100 console.log(getRandomInt());
-  return Math.floor(Math.random() * 100);
-}
-
-export function getRandomIntMinMax(min, max) { // Получение рандомных целых чисел от 0 до Step console.log(getRandomInt());
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 export const nod = (intA, intB) => {
   let i = 0;
 
   for (i; i <= 2; i += 1) {
-    let randomOne = intA;
-    let randomTwo = intB;
+    let randomOne = Number(intA);
+    let randomTwo = Number(intB);
 
-    while (randomOne != 0 & randomTwo != 0) {
+    while (randomOne !== 0 & randomTwo !== 0) {
       if (randomOne > randomTwo) { // если а больше б, то а присваиваем а/б
         randomOne %= randomTwo;
       } else {
@@ -71,12 +72,12 @@ export const nod = (intA, intB) => {
 
 export const progressionGenerator = (progressionLength) => {
   let i;
-  let startFrom = getRandomIntMinMax(1, 50);
-  const step = getRandomIntMinMax(1, 6);
-  //const progressionLength;
+  let startFrom = getRandomIntMinMax(1, 30);
+  const step = Number(getRandomIntMinMax(1, 6));// Интервал
+  // const progressionLength;
   const makeArray = [];
 
-  for (i = 1; i <= progressionLength; i++) {
+  for (i = 1; i <= progressionLength; i += 1) {
     startFrom += step;
     makeArray.push(startFrom);
   }
@@ -85,7 +86,7 @@ export const progressionGenerator = (progressionLength) => {
 
 /// Проверка числа не Простое оно или нет.
 export function isPrime(num) {
-  for (let i = 2; i < num; i++) {
+  for (let i = 2; i < num; i += 1) {
     if (num % i === 0) return false;
   }
   return num !== 1;

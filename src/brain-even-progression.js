@@ -22,27 +22,26 @@ export const answer = () => {
   let countTrueAnswers = 0;
 
   for (i; i <= 2; i += 1) {
-    var MaxLenght = getRandomIntMinMax(5, 10)
+    const MaxLenght = Number(getRandomIntMinMax(5, 10)); // Длина будет от 5 до 10
     const nodItog = progressionGenerator(MaxLenght);
     const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght), 1, '..');
-
-    // в указанном индексе массива, 1 элемент заменяется на ..
+    // в индексе,элемент заменяется на .. и то что заменилось передается в removed
 
     console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
-    const answerUser = readlineSync.question('Your answer: ');
+    const answerUser = Number(readlineSync.question('Your answer: '));
 
     if (answerUser == removed) {
       console.log('Correct!');
       countTrueAnswers += 1;
-    } else if (answerUser != removed) {
-      console.log(`'${answerUser}'` + ' is wrong answer ;(. Correct answer was ' + `'${removed}'` + '.');
-      console.log(`Let\'s try again, ${nameUser}!`);
+    } else if (answerUser !== removed) {
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${removed}'.`);
+      console.log(`Let's try again, ${nameUser}!`);
       i = 2;
       break;
     } else { console.log('Error'); }
   }
 
-  if (countTrueAnswers == 3) {
+  if (countTrueAnswers === 3) {
     console.log(`Congratulations, ${nameUser}!`);
   }
 };
