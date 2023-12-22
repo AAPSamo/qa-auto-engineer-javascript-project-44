@@ -26,7 +26,7 @@ export const answer = () => {
     // console.log("MaxLenght " + MaxLenght)
     const nodItog = progressionGenerator(MaxLenght);
     // console.log("nodItog " + nodItog)
-    const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght - 1), 1, '..');
+    const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght), 1, '..');
     // console.log("removed " + removed);
     // в индексе,элемент заменяется на .. и то что заменилось передается в removed
 
