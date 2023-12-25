@@ -29,7 +29,7 @@ export const answer = () => {
     const randomForRemoved = getRandomIntMinMax(0, MaxLenght - 1);
     // console.log("randomForRemoved " + randomForRemoved)
     const removed = nodItog.splice(randomForRemoved, 1, '..');
-    let removed2 = Number(removed);
+    const removed2 = Number(removed);
     // console.log("removed " + removed);
     // в индексе,элемент заменяется на .. и то что заменилось передается в removed
 
