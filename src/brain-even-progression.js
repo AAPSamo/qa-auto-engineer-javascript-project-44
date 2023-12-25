@@ -23,20 +23,23 @@ export const answer = () => {
 
   for (i; i <= 2; i += 1) {
     const MaxLenght = Number(getRandomIntMinMax(6, 10)); // Длина будет от 6 до 10
-    // console.log("MaxLenght " + MaxLenght)
+    // console.log("MaxLenght " + MaxLenght) // сгенерировано 9
     const nodItog = progressionGenerator(MaxLenght);
     // console.log("nodItog " + nodItog)
-    const removed = nodItog.splice(getRandomIntMinMax(1, MaxLenght), 1, '..');
+    const randomForRemoved = getRandomIntMinMax(0, MaxLenght - 1);
+    // console.log("randomForRemoved " + randomForRemoved)
+    const removed = nodItog.splice(randomForRemoved, 1, '..');
+    let removed2 = Number(removed);
     // console.log("removed " + removed);
     // в индексе,элемент заменяется на .. и то что заменилось передается в removed
 
     console.log(`Question:${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
     const answerUser = Number(readlineSync.question('Your answer: '));
 
-    if (answerUser == Number(removed)) {
+    if (answerUser === removed2) {
       console.log('Correct!');
       countTrueAnswers += 1;
-    } else if (answerUser != removed) {
+    } else if (answerUser !== removed2) {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${removed}'.`);
       console.log(`Let's try again, ${nameUser}!`);
       i = 2;
