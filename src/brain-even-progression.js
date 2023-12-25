@@ -33,7 +33,7 @@ export const answer = () => {
     // console.log("removed " + removed);
     // в индексе,элемент заменяется на .. и то что заменилось передается в removed
 
-    console.log(`Question:${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
+    console.log(`Question: ${nodItog.join(' ')}`); // .join(' ') убирает ,  в выводе массива
     const answerUser = Number(readlineSync.question('Your answer: '));
 
     if (answerUser === removed2) {
