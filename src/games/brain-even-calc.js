@@ -1,14 +1,15 @@
 import readlineSync from 'readline-sync';
-import { randomArithmetecOperations } from './index.js';
+import { getRandomInt, randomArithmetecOperations } from '../index.js';
 
-function getRandomInt() { // Получение рандомных целых чисел от 0 до 100
-  return Math.floor(Math.random() * 50);
-}
+// function getRandomInt() { // Получение рандомных целых чисел от 0 до 100
+// return Math.floor(Math.random() * 50);
+// }
 
 let nameUser;
 // randomArithmetecOperations();
 
 export const name = () => {
+  console.log('Welcome to the Brain Games!');
   nameUser = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameUser}!`);
 };

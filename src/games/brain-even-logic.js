@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt } from './index.js';
+import { getRandomInt } from '../index.js';
 
 let nameUser;
 

@@ -5,10 +5,11 @@
 */
 
 import readlineSync from 'readline-sync';
-import { getRandomInt, nod } from './index.js';
+import { getRandomInt, nod } from '../index.js';
 
 let nameUser;
 export const name = () => {
+  console.log('Welcome to the Brain Games!');
   nameUser = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameUser}!`);
 };

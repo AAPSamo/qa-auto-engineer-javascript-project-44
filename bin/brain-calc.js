@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { name, answer } from '../src/brain-even-calc.js';
+import { name, answer } from '../src/games/brain-even-calc.js';
 
-console.log('Welcome to the Brain Games!');
+// console.log('Welcome to the Brain Games!');
 name();
 answer();

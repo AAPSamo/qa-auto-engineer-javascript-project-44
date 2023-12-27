@@ -1,11 +1,14 @@
-import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
+// let nameUser;
 
-let nameUser;
-
+/*
 export const name = () => {
-  nameUser = readlineSync.question('May I have your name? ');
+  console.log('Welcome to the Brain Games!');
+  const nameUser = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameUser}!`);
+  return nameUser;
 };
+*/
 
 export const randomArithmetecOperations = () => {
   const numbers = ['+', '-', '*'];
@@ -23,6 +26,7 @@ export function getRandomIntMinMax(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/*
 export const answer = () => {
   console.log('What is the result of the expression?');
 
@@ -50,6 +54,7 @@ export const answer = () => {
     console.log(`You have errors, ${nameUser}!`);
   }
 };
+*/
 
 export const nod = (intA, intB) => {
   let i = 0;
@@ -89,11 +94,3 @@ export function isPrime(num) {
   }
   return num !== 1;
 }
-
-/// Проверка чисел от 0 до МАКС не Простое оно или нет.
-/* function printPrimes(max) {
-  for (let i = 2; i <= max; i++) {
-    if (isPrime(i)) console.log(i);
-  }
-}
-*/

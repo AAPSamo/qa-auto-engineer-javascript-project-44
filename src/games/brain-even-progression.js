@@ -7,10 +7,11 @@
 import readlineSync from 'readline-sync';
 import {
   progressionGenerator, getRandomIntMinMax,
-} from './index.js';
+} from '../index.js';
 
 let nameUser;
 export const name = () => {
+  console.log('Welcome to the Brain Games!');
   nameUser = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameUser}!`);
 };
