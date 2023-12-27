@@ -6,7 +6,7 @@ function getRandomInt() { // Получение рандомных целых ч
 }
 
 let nameUser;
-randomArithmetecOperations();
+//randomArithmetecOperations();
 
 export const name = () => {
   nameUser = readlineSync.question('May I have your name? ');
