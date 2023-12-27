@@ -2,6 +2,6 @@
 
 import { name, answer } from '../src/brain-even-logic.js';
 
-//console.log('Welcome to the Brain Games!');
+// console.log('Welcome to the Brain Games!');
 name();
 answer();

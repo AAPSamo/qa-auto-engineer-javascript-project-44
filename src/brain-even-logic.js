@@ -13,10 +13,9 @@ export const answer = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 0;
   let countTrueAnswers = 0;
-  
 
   for (i; i <= 2; i += 1) {
-    let questionDigit = Number(getRandomInt());
+    const questionDigit = Number(getRandomInt());
     let answerUser;
     if (questionDigit % 2 === 0) {
       console.log(`Question: ${questionDigit}`);
