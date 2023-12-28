@@ -8,6 +8,5 @@
 
 import { name, answer } from '../src/games/brain-even-gcd.js';
 
-// console.log('Welcome to the Brain Games!');
 name();
 answer();

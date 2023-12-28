@@ -22,7 +22,6 @@ export const answer = () => {
   for (i; i <= 2; i += 1) {
     const checkNumber = getRandomIntMinMax(1, 100);
     const primeOrNot = isPrime(checkNumber);
-    // console.log(primeOrNot);
 
     console.log(`Question: ${checkNumber}`);
     const answerUser = readlineSync.question('Your answer: ');

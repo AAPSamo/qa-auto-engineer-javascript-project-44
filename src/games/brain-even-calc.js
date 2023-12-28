@@ -1,12 +1,7 @@
 import readlineSync from 'readline-sync';
 import { getRandomInt, randomArithmetecOperations } from '../index.js';
 
-// function getRandomInt() { // Получение рандомных целых чисел от 0 до 100
-// return Math.floor(Math.random() * 50);
-// }
-
 let nameUser;
-// randomArithmetecOperations();
 
 export const name = () => {
   console.log('Welcome to the Brain Games!');
