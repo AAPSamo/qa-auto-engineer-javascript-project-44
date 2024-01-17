@@ -6,7 +6,9 @@
 Игрок должен определить это число.
 */
 
-import { name, answer } from '../src/games/brain-even-progression.js';
+import { indexMainFunction } from '../src/index.js';
+import { getQuestionAndAnswer, questionAboutResult } from '../src/games/brain-even-progression.js';
 
-name();
-answer();
+indexMainFunction(getQuestionAndAnswer, questionAboutResult);
+// вызываются questionAboutResult(текстовка), getQuestionAndAnswer(обект)
+// и их результаты передаются в indexMainFunction

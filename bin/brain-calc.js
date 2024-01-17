@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-import { name, answer } from '../src/games/brain-even-calc.js';
+import { indexMainFunction } from '../src/index.js';
+import { getQuestionAndAnswer, questionAboutResult } from '../src/games/brain-even-calc.js';
 
-name();
-answer();
+indexMainFunction(getQuestionAndAnswer, questionAboutResult);
+// вызываются questionAboutResult(текстовка), getQuestionAndAnswer(обект)
+// и их результаты передаются в indexMainFunction

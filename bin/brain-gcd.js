@@ -6,7 +6,9 @@
 ввести наибольший общий делитель этих чисел.
 */
 
-import { name, answer } from '../src/games/brain-even-gcd.js';
+import { indexMainFunction } from '../src/index.js';
+import { getQuestionAndAnswer, questionAboutResult } from '../src/games/brain-even-gcd.js';
 
-name();
-answer();
+indexMainFunction(getQuestionAndAnswer, questionAboutResult);
+// вызываются questionAboutResult(текстовка), getQuestionAndAnswer(обект)
+// и их результаты передаются в indexMainFunction

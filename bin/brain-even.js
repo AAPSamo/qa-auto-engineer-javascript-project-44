@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { name, answer } from '../src/games/brain-even-logic.js';
+import { indexMainFunction } from '../src/index.js';
+import { getQuestionAndAnswer, questionAboutResult } from '../src/games/brain-even-logic.js';
 
-name();
-answer();
+indexMainFunction(getQuestionAndAnswer, questionAboutResult);

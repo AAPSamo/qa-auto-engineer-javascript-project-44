@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import nameUserFunction from '../src/cli.js';
+import nameUserWelcomeFunction from '../src/cli.js';
 
-nameUserFunction();
+nameUserWelcomeFunction();

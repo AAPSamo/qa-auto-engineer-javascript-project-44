@@ -4,42 +4,21 @@
 ввести наибольший общий делитель этих чисел.
 */
 
-import readlineSync from 'readline-sync';
 import { getRandomInt, nod } from '../index.js';
 
-let nameUser;
-export const name = () => {
-  console.log('Welcome to the Brain Games!');
-  nameUser = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${nameUser}!`);
-};
+export const questionAboutResult = 'Find the greatest common divisor of given numbers.';
 
-export const answer = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-
+export const getQuestionAndAnswer = () => {
   let i = 0;
-  let countTrueAnswers = 0;
+  let questionForUser;
+  let answerMathematicItog;
 
   for (i; i <= 2; i += 1) {
     const randomOne = getRandomInt() + 1;
     const randomTwo = getRandomInt() + 1;
-    const nodItog = Number(nod(randomOne, randomTwo));
-
-    console.log(`Question: ${randomOne} ${randomTwo}`);
-    const answerUser = Number(readlineSync.question('Your answer: '));
-
-    if (answerUser === nodItog) {
-      console.log('Correct!');
-      countTrueAnswers += 1;
-    } else if (answerUser !== nodItog) {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${nodItog}'.`);
-      console.log(`Let's try again, ${nameUser}!`);
-      i = 2;
-      break;
-    } else { console.log('Error'); }
+    answerMathematicItog = Number(nod(randomOne, randomTwo));
+    questionForUser = (`${randomOne} ${randomTwo}`);
   }
 
-  if (countTrueAnswers === 3) {
-    console.log(`Congratulations, ${nameUser}!`);
-  }
+  return { questionForUser, answerMathematicItog };// +
 };
