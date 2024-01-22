@@ -17,8 +17,7 @@ export const getQuestionAndAnswer = () => {
   for (let i = 0; i <= 2; i += 1) {
     questionForUser = getRandomIntMinMax(1, 100);
     const primeOrNot = isPrime(questionForUser);
-
-    answerMathematicItog = (primeOrNot % 2 === true) ? 'yes' : 'no';
+    answerMathematicItog = (primeOrNot === true) ? 'yes' : 'no';
   }
 
   return { questionForUser, answerMathematicItog };
