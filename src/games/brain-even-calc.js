@@ -1,35 +1,31 @@
-import { getRandomInt } from '../utils.js';
+import getRandomIntMinMax from '../utils.js';
 
 export const questionAboutResult = 'What is the result of the expression?';
 
 const randomArithmetecOperations = () => {
   const numbers = ['+', '-', '*'];
-  const randomIndex = Math.floor(Math.random() * (numbers.length));// генер.случ. индекс в диапазоне
-  return numbers[randomIndex];
+  return numbers[getRandomIntMinMax(0, 2)];
 };
 
 export function getQuestionAndAnswer() {
   let answerMathematicItog;
-  let questionForUser;
-  const randomOne = Number(getRandomInt());
-  const randomTwo = Number(getRandomInt());
+  const randomOne = Number(getRandomIntMinMax(0, 100));
+  const randomTwo = Number(getRandomIntMinMax(0, 100));
   const operator = randomArithmetecOperations();
   switch (operator) {
     case '+':
       answerMathematicItog = randomOne + randomTwo;
-      questionForUser = `${randomOne} ${operator} ${randomTwo}`;
       break;
 
     case '-':
       answerMathematicItog = randomOne - randomTwo;
-      questionForUser = `${randomOne} ${operator} ${randomTwo}`;
       break;
 
     case '*':
       answerMathematicItog = randomOne * randomTwo;
-      questionForUser = `${randomOne} ${operator} ${randomTwo}`;
       break;
     default: break;
   }
+  const questionForUser = `${randomOne} ${operator} ${randomTwo}`;
   return { questionForUser, answerMathematicItog };
 }

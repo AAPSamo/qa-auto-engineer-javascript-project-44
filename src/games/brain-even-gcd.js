@@ -1,4 +1,4 @@
-import { getRandomInt } from '../utils.js';
+import getRandomIntMinMax from '../utils.js';
 
 export const questionAboutResult = 'Find the greatest common divisor of given numbers.';
 
@@ -7,22 +7,20 @@ const nod = (intA, intB) => {
   let randomTwo = Number(intB);
 
   while (randomOne !== 0 && randomTwo !== 0) {
-    if (randomOne > randomTwo) { // если а больше б, то а присваиваем а/б
+    if (randomOne > randomTwo) {
       randomOne %= randomTwo;
     } else {
-      randomTwo %= randomOne;// наоборот
+      randomTwo %= randomOne;
     }
   }
   return randomOne + randomTwo;
 };
 
 export const getQuestionAndAnswer = () => {
-  // let answerMathematicItog;
-
-  const randomOne = getRandomInt() + 1;
-  const randomTwo = getRandomInt() + 1;
+  const randomOne = getRandomIntMinMax(0, 100) + 1;
+  const randomTwo = getRandomIntMinMax(0, 100) + 1;
   const answerMathematicItog = Number(nod(randomOne, randomTwo));
   const questionForUser = (`${randomOne} ${randomTwo}`);
 
-  return { questionForUser, answerMathematicItog };// +
+  return { questionForUser, answerMathematicItog };
 };

@@ -5,14 +5,13 @@ export default function textMessagesWithUser(getQuestionAndAnswer, questionAbout
   let countTrueAnswers = 0;
   const maxTrueAnswers = 3;
   const nameUserWelcomeConst = nameUserWelcomeFunction();
-  // Из cli 1. Welcome to the Brain Games! 2. May I have your name? 3. потребуется ввести имя
 
   while (countTrueAnswers < maxTrueAnswers) {
     const currentQuestion = getQuestionAndAnswer();
-    console.log(questionAboutResult); // -console.log('What is the result of the expression?')
+    console.log(questionAboutResult);
 
-    console.log(`Question: ${currentQuestion.questionForUser}`);// Задается вопрос Question:<Цифра>
-    const userAnswer = readlineSync.question('Your answer: ');// вводится ответ от пользователя
+    console.log(`Question: ${currentQuestion.questionForUser}`);
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === String(currentQuestion.answerMathematicItog)) {
       console.log('Correct!');

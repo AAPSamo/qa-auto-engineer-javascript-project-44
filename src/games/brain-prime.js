@@ -1,6 +1,4 @@
-import {
-  getRandomIntMinMax,
-} from '../utils.js';
+import getRandomIntMinMax from '../utils.js';
 
 export const questionAboutResult = 'Answer "yes" if given number is prime. Otherwise answer "no". ';
 
@@ -20,9 +18,8 @@ export const getQuestionAndAnswer = () => {
     questionForUser = getRandomIntMinMax(1, 100);
     const primeOrNot = isPrime(questionForUser);
 
-    if (primeOrNot === true) {
-      answerMathematicItog = 'yes';
-    } else answerMathematicItog = 'no';
+    answerMathematicItog = (primeOrNot % 2 === true) ? 'yes' : 'no';
   }
+
   return { questionForUser, answerMathematicItog };
 };
